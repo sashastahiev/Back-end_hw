@@ -30,13 +30,10 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello, World!');
   } else {
-    // Любые другие параметры
     res.writeHead(500);
     res.end();
   }
 });
-
-// Запускаем сервер на 127.0.0.1:3003
 server.listen(3003, '127.0.0.1', () => {
   console.log('Сервер запущен: http://127.0.0.1:3003/');
 });
