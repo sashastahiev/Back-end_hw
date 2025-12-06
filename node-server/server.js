@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Failed to read users.json' }));
+        res.end('');
       } else {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(data);
